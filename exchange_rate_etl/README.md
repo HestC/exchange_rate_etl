@@ -1,41 +1,46 @@
 
 
+**Inner ReadMe**
+**Exchange Rate ETL Project**
+
 **Overview**
-**Data Source**
 
-The pipeline uses data from the ExchangeRate-API, a public API providing real-time exchange rates.
-    
-Base URL: https://v6.exchangerate-api.com/v6/d6c06f55edf64bb0d48a4a51/latest/USD
-    
-Data includes exchange rates for multiple currencies relative to a specified base currency.
+The Exchange Rate ETL (Extract, Transform, Load) Project is a data engineering pipeline designed to extract exchange rate data from the Exchange Rate API, transform the data into a usable format, and load it into a database for further analysis and visualization.
 
-**Transformation Steps**
+This project is using Render.com and Chart.JS, ensuring deployment and visualization the web applications.
 
-The raw data is extracted in JSON format.
+Note: This repository includes an additional inner README file within the exchange_rate_etl directory. The inner README provides deeper insights into the specific components and detailed operations of the project.
 
-The relevant exchange rate information is transformed into a Pandas DataFrame with the following columns:
-    
-1) currency: Three-letter currency code (e.g., USD, EUR).
-        
-2) rate: Exchange rate relative to the base currency.
-        
-3) date: The timestamp of the data extraction (automatically added).
+Features
 
-**Destination of the Data**
+Extracts real-time exchange rate data from the Exchange Rate API.
 
-The transformed data is loaded into a SQLite database located in the instance directory:
-    
- 1) Database Name: exchange_rates.db.
-        
- 2) Table Name: exchange_rate.
+Transforms and cleans data for better usability.
 
-**Pipeline Automation**
+Loads and stores data in a relational database using SQLAlchemy Object-Relational Mapping (ORM).
 
-The pipeline is automated using a Python script (etl_service.py) that executes the following steps:
-    
-1) Extraction: Fetches data from the API using the requests library
-        
-2) Transformation: Processes the JSON response into a structured DataFrame
-        
-3) Loading: Stores the transformed data into the SQLite database using SQLAlchemy
+Visualizes exchange rate trends with a bar chart using Chart.js integrated into a Flask web application.
+
+Deployed to Render.com for easy accessibility.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
