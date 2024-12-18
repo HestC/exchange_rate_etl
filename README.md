@@ -1,21 +1,40 @@
+
 **Exchange Rate ETL Project**
+**Overview Data Source**
 
-**Overview**
+The pipeline uses data from the ExchangeRate-API, a public API providing real-time exchange rates.
 
-The Exchange Rate ETL (Extract, Transform, Load) Project is a data engineering pipeline designed to extract exchange rate data from the Exchange Rate API, transform the data into a usable format, and load it into a database for further analysis and visualization.
+Base URL: https://v6.exchangerate-api.com/v6/d6c06f55edf64bb0d48a4a51/latest/USD
 
-This project is using Render.com and Chart.JS, ensuring deployment and visualization the web applications.
+Data includes exchange rates for multiple currencies relative to a specified base currency.
 
-Note: This repository includes an additional inner README file within the exchange_rate_etl directory. The inner README provides deeper insights into the specific components and detailed operations of the project.
+Transformation Steps
 
-Features
+The raw data is extracted in JSON format.
 
-Extracts real-time exchange rate data from the Exchange Rate API.
+The relevant exchange rate information is transformed into a Pandas DataFrame with the following columns:
 
-Transforms and cleans data for better usability.
+    currency: Three-letter currency code (e.g., USD, EUR).
 
-Loads and stores data in a relational database using SQLAlchemy Object-Relational Mapping (ORM).
+    rate: Exchange rate relative to the base currency.
 
-Visualizes exchange rate trends with a bar chart using Chart.js integrated into a Flask web application.
+    date: The timestamp of the data extraction (automatically added).
 
-Deployed to Render.com for easy accessibility.
+Destination of the Data
+
+The transformed data is loaded into a SQLite database located in the instance directory:
+
+    Database Name: exchange_rates.db.
+
+    Table Name: exchange_rate.
+
+Pipeline Automation
+
+The pipeline is automated using a Python script (etl_service.py) that executes the following steps:
+
+    Extraction: Fetches data from the API using the requests library
+
+    Transformation: Processes the JSON response into a structured DataFrame
+
+    Loading: Stores the transformed data into the SQLite database using SQLAlchemy
+
