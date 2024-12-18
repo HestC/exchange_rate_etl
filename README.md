@@ -4,7 +4,7 @@
 
 The Exchange Rate ETL (Extract, Transform, Load) Project is a data engineering pipeline designed to extract exchange rate data from the Exchange Rate API, transform the data into a usable format, and load it into a database for further analysis and visualization.
 
-This project is deployed using Render.com, ensuring a professional-grade hosting solution for the web application.
+This project is using Render.com and Chart.JS, ensuring deployment and visualization the web applications.
 
 Note: This repository includes an additional inner README file within the exchange_rate_etl directory. The inner README provides deeper insights into the specific components and detailed operations of the project.
 
