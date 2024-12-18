@@ -1,0 +1,17 @@
+exchange_rate_etl/
+├── app/
+│   ├── __init__.py        # App and database initialization
+│   ├── models/
+│   │   ├── __init__.py    # Models module initialization
+│   │   ├── exchange_rate.py  # ExchangeRate model definition
+│   ├── services/
+│   │   ├── __init__.py    # Services module initialization
+│   │   ├── etl_service.py # Main ETL pipeline script
+│   ├── routes/            # Flask routes
+│   └── templates/         # HTML templates for Flask views
+├── instance/              # Contains the SQLite database
+│   └── exchange_rates.db  # SQLite database file
+├── validate_db.py         # Script to validate loaded data
+├── test_db.py             # Script to verify table creation
+├── requirements.txt       # Python dependencies
+└── README.md              # Project documentation

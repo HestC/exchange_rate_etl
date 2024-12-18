@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Rate Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Exchange Rate Bar Chart</h1>
+    <canvas id="exchangeRateChart" width="800" height="400"></canvas>
+    <script>
+        // Data passed from Flask
+        const labels = {{ labels|tojson }};
+        const data = {{ data|tojson }};
+
+        // Chart.js configuration
+        const ctx = document.getElementById('exchangeRateChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Exchange Rates',
+                    data: data,
+                    backgroundColor: 'rgba(0, 71, 171, 0.6)', // Cobalt blue with opacity
+                    borderColor: 'rgba(0, 71, 171, 1)',       // Cobalt blue border
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        display: true,
+                        labels: {
+                            color: 'black'
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Currencies',
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            },
+                            color: 'black'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Exchange Rate',
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            },
+                            color: 'black'
+                        },
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
