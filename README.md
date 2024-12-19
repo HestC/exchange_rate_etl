@@ -9,7 +9,7 @@ The Exchange Rate ETL Project is a data pipeline designed to handle the extracti
 
 ### Data Source
 
-The pipeline uses data from the ExchangeRate-API, a public API providing real-time exchange rates.
+The pipeline uses data from the ExchangeRate-API, a public API providing real-time exchange rates.  https://www.exchangerate-api.com/
 
 Base URL: https://v6.exchangerate-api.com/v6/d6c06f55edf64bb0d48a4a51/latest/USD
 
@@ -28,27 +28,27 @@ The raw data is extracted in JSON format.
 
 The relevant exchange rate information is transformed into a Pandas DataFrame with the following columns:
 
-    currency: Three-letter currency code (e.g., USD, EUR).
+ * currency: Three-letter currency code (e.g., USD, EUR).
 
-    rate: Exchange rate relative to the base currency.
+ * rate: Exchange rate relative to the base currency.
 
-    date: The timestamp of the data extraction (automatically added).
+ * date: The timestamp of the data extraction (automatically added).
 
 ### Destination of the Data
 
 The transformed data is loaded into a SQLite database using SQlalchemy located in the instance directory:
 
-    Database Name: exchange_rates.db.
+ * Database Name: exchange_rates.db.
 
-    Table Name: exchange_rate.
+ * Table Name: exchange_rate.
 
 ### Pipeline Automation
 
 The pipeline is automated using a Python script (etl_service.py) that executes the following steps:
 
-    Extraction: Fetches data from the API using the requests library
+* Extraction: Fetches data from the API using the requests library
 
-    Transformation: Processes the JSON response into a structured DataFrame
+* Transformation: Processes the JSON response into a structured DataFrame
 
-    Loading: Stores the transformed data into the SQLite database using SQLAlchemy
+* Loading: Stores the transformed data into the SQLite database using SQLAlchemy
 
