@@ -12,6 +12,10 @@ The Exchange Rate ETL Project is a data pipeline designed to handle the extracti
 
 
 
+* Note: This repository includes an additional inner README file within the exchange_rate_etl directory. The inner README provides deeper insights into the specific components and detailed operations of the project.
+
+
+
 ## Data Source
 
 The pipeline uses data from the ExchangeRate-API, a public API providing real-time exchange rates.  https://www.exchangerate-api.com/
@@ -60,5 +64,4 @@ The pipeline is automated using a Python script (etl_service.py) that executes t
 
   
 
-* Note: This repository includes an additional inner README file within the exchange_rate_etl directory. The inner README provides deeper insights into the specific components and detailed operations of the project.
 
