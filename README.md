@@ -59,6 +59,7 @@ The pipeline is automated using a Python script (etl_service.py) that executes t
 * Transformation: Processes the JSON response into a structured DataFrame
 
 * Loading: Stores the transformed data into the SQLite database using SQLAlchemy
+  
 
   
 
