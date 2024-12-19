@@ -52,3 +52,7 @@ The pipeline is automated using a Python script (etl_service.py) that executes t
 
 * Loading: Stores the transformed data into the SQLite database using SQLAlchemy
 
+  
+
+* Note: This repository includes an additional inner README file within the exchange_rate_etl directory. The inner README provides deeper insights into the specific components and detailed operations of the project.
+
