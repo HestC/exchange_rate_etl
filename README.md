@@ -54,9 +54,9 @@ The transformed data is loaded into a SQLite database using SQlalchemy located i
 
 The pipeline is automated using a Python script (etl_service.py) that executes the following steps:
 
-* Extraction: Fetches data from the API using the requests library
+* Extraction: Extracts data from the Exchange_Rates API using the requests library
 
-* Transformation: Processes the JSON response into a structured DataFrame
+* Transformation: Processes the JSON response into a structured data frame
 
 * Loading: Stores the transformed data into the SQLite database using SQLAlchemy
   
