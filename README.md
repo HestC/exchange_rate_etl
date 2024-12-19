@@ -24,12 +24,10 @@ Base URL: https://v6.exchangerate-api.com/v6/d6c06f55edf64bb0d48a4a51/latest/USD
 
 The dataset includes key features such as exchange rates for multiple currencies relative to a specified base currency, in this case the US dollar ($USD).
 
-(venv) chester@Chesters-MacBook-Pro exchange_rate_etl % python app.py
-
 reload end point: http://127.0.0.1:5001/reload
 visualization endpoint: http://127.0.0.1:5001/chart
 
-load data using app.py: python ap.py
+data is loaded using app.py: python ap.py
 
 
 ## Transformation Steps
