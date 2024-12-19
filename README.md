@@ -3,11 +3,16 @@
 
 ## Overview
 
-The Exchange Rate ETL Project is a data pipeline designed to handle the extraction, transformation, and loading of exchange rate data from the Exchange Rate API,a public API providing real-time exchange rates. The project focuses on processing real-time currency exchange data, storing it in a relational database, and providing visual insights using a bar chart built with Chart.js. The API is developed using Flask.
+The Exchange Rate ETL Project is a data pipeline designed to handle the extraction, transformation, and loading of exchange rate data from the Exchange Rate API,a public API providing real-time exchange rates. The project focuses on processing real-time currency exchange data, storing it in a relational database, and providing visual insights using a bar chart built with Chart.js. The API was developed using Flask, and has two main endpoints.
+
+   * /reload endpoint: Reloads data and produces a table of realtime currency exchange rates
+   * /visualization: produces a bar chart of the top 10 currencies
 
 
 
-### Data Source
+
+
+## Data Source
 
 The pipeline uses data from the ExchangeRate-API, a public API providing real-time exchange rates.  https://www.exchangerate-api.com/
 
@@ -22,7 +27,8 @@ visualization endpoint: http://127.0.0.1:5001/chart
 
 load data using app.py: python ap.py
 
-### Transformation Steps
+
+## Transformation Steps
 
 The raw data is extracted in JSON format.
 
