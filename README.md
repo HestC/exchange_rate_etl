@@ -29,7 +29,7 @@ The dataset includes key features such as exchange rates for multiple currencies
 
 * visualization endpoint: http://127.0.0.1:5001/chart
 
-data is loaded using the app.py file via the command line in the IDE terminal: python ap.py
+The data is loaded using the app.py file via the command line in the IDE terminal: python ap.py
 
 
 ## Transformation Steps
