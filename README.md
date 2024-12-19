@@ -18,7 +18,7 @@ The pipeline uses data from the ExchangeRate-API, a public API providing real-ti
 
 Base URL: https://v6.exchangerate-api.com/v6/d6c06f55edf64bb0d48a4a51/latest/USD
 
-Data includes exchange rates for multiple currencies relative to a specified base currency.
+The dataset includes key features such as exchange rates for multiple currencies relative to a specified base currency, in this case the US dollar ($USD).
 
 (venv) chester@Chesters-MacBook-Pro exchange_rate_etl % python app.py
 
@@ -40,7 +40,7 @@ The relevant exchange rate information is transformed into a Pandas DataFrame wi
 
  * date: The timestamp of the data extraction (automatically added).
 
-### Destination of the Data
+## Destination of the Data
 
 The transformed data is loaded into a SQLite database using SQlalchemy located in the instance directory:
 
@@ -48,7 +48,7 @@ The transformed data is loaded into a SQLite database using SQlalchemy located i
 
  * Table Name: exchange_rate.
 
-### Pipeline Automation
+## Pipeline Automation
 
 The pipeline is automated using a Python script (etl_service.py) that executes the following steps:
 
