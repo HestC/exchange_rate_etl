@@ -54,7 +54,7 @@ exchange_rate_etl/
 
 ### 3. **Visualization**
 - **Chart.js**:
-  - Displays exchange rate trends in a dynamic bar chart.
+  - Displays exchange rate trends in a bar chart.
   - Fetches data from Flask endpoints to render real-time visualizations.
 
 ### 4. **Deployment**
