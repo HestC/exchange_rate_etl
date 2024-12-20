@@ -1,5 +1,5 @@
 
-#  Exchange Rate ETL Project
+#  Exchange Rate ETL Project   -- outer README.md
 
 ## Overview
 
@@ -13,7 +13,7 @@ The Exchange Rate ETL Project is a data pipeline designed to handle the extracti
 
 
 
-* Note: This repository includes an additional inner README file within the exchange_rate_etl directory. The inner README provides deeper insights into the specific components and detailed operations of the project.
+* **Note: This repository includes an additional inner README file within the exchange_rate_etl directory. The inner README provides deeper insights into the specific components and detailed operations of the project.**
 
 
 
