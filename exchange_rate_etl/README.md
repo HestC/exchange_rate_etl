@@ -67,8 +67,8 @@ exchange_rate_etl/
 ## Setup Instructions
 
 ### Prerequisites
-1. Python 3.11 installed (macOS M2 or Windows).
-2. Install SQLite3 for database management.
+1. Python 3.11 installed (macOS or Windows).
+2. Install SQLAlchemy for database management.
 3. Install `virtualenv` to manage project dependencies in an isolated environment.
 
 ### Environment Setup
